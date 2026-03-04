@@ -41,7 +41,7 @@ const NoteCard = ({ note }: NoteCardProps) => {
         <div className="flex gap-1 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
           <button 
             onClick={() => dispatch(openEditModal(note.id))}
-            className="p-2 hover:bg-slate-100 rounded-full text-slate-600 transition-colors"
+            className="p-2 hover:bg-slate-100 rounded-full text-slate-600 transition-colors cursor-pointer"
             title="Edit Note"
           >
             <Edit3 size={16} />
@@ -49,7 +49,7 @@ const NoteCard = ({ note }: NoteCardProps) => {
           
           <button 
             onClick={() => dispatch(deleteNote(note.id))}
-            className="p-2 hover:bg-red-50 rounded-full text-red-500 transition-colors"
+            className="p-2 hover:bg-red-50 rounded-full text-red-500 transition-colors cursor-pointer"
             title="Delete Note"
           >
             <Trash2 size={16} />
