@@ -21,7 +21,7 @@ const NoteModal = () => {
         state.notes.notes.find((n) => n.id === activeNoteId)
     );
 
-    const [selectedColor, setSelectedColor] = useState(activeNote?.color || 'bg-white');
+    const [selectedColor, setSelectedColor] = useState(activeNote?.color || 'bg-slate-100');
     const [title, setTitle] = useState(activeNote?.title || '');
     const [details, setDetails] = useState(activeNote?.details || '');
 
@@ -49,7 +49,7 @@ const NoteModal = () => {
         
             <div className="flex items-center justify-between p-6 border-b border-slate-50">
                 <span className="text-[10px] font-bold uppercase text-slate-400 tracking-widest">Edit Note</span>
-                <button onClick={() => dispatch(closeModal())} className="p-2 hover:bg-slate-100 rounded-full text-slate-400">
+                <button onClick={() => dispatch(closeModal())} className="cursor-pointer p-2 hover:bg-slate-100 rounded-full text-slate-400">
                     <X size={20} />
                 </button>
             </div>
@@ -78,7 +78,7 @@ const NoteModal = () => {
                         key={color.value}
                         onClick={() => setSelectedColor(color.value)}
                         style={{ backgroundColor: color.hex }} 
-                        className={`w-8 h-8 rounded-full border-2 transition-all 
+                        className={`w-8 h-8 rounded-full border-2 transition-all cursor-pointer
                             ${selectedColor === color.value 
                             ? 'border-black scale-110 shadow-md' 
                             : 'border-slate-400 hover:scale-105'
@@ -90,12 +90,12 @@ const NoteModal = () => {
             </div>
 
             <div className="p-6 bg-slate-50 flex justify-end gap-3">
-                <button onClick={() => dispatch(closeModal())} className="px-6 py-2 text-sm font-bold text-slate-400 hover:text-slate-600">
+                <button onClick={() => dispatch(closeModal())} className="cursor-pointer px-6 py-2 text-sm font-bold text-slate-400 hover:text-slate-600">
                     Discard
                 </button>
                 <button
                 onClick={handleSave}
-                className="flex items-center gap-2 px-8 py-3 bg-black text-white rounded-full text-sm font-bold hover:bg-slate-800 transition-all shadow-lg active:scale-95"
+                className="cursor-pointer flex items-center gap-2 px-8 py-3 bg-black text-white rounded-full text-sm font-bold hover:bg-slate-800 transition-all shadow-lg active:scale-95"
                 >
                     <Check size={18} />
                     Save Changes
