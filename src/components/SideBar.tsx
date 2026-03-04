@@ -25,7 +25,7 @@ function SideBar() {
                 transition-transform active:scale-95"
                 title="Add new note"
             >
-                <span className="mb-2">+</span>
+                <span className="mb-1 md:mb-2">+</span>
             </button>
 
         </aside>
