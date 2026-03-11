@@ -11,11 +11,14 @@ const NoteCard = ({ note }: NoteCardProps) => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className={`${bgColor} p-6 rounded-3xl border border-slate-200 shadow-sm 
+    <div 
+    role='note'
+    className={`${bgColor} p-6 rounded-3xl border border-slate-200 shadow-sm 
     hover:shadow-md transition-shadow group relative flex flex-col h-full`}>
       <button 
         onClick={() => dispatch(toggleFeatured(note.id))}      
         className="absolute top-4 right-4 transition-all duration-300 active:scale-90"
+        title="Toggle Featured"
       >
         <Star 
           size={20} 
