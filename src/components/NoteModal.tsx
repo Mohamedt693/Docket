@@ -70,7 +70,7 @@ const NoteModal = () => {
                 />
             </div>
 
-            <div className="px-8 pb-6 flex items-center gap-4">
+            <div className="px-4 md:px-8 pb-6 flex items-center gap-4">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Theme:</span>
                 <div className="flex gap-2">
                     {colors.map((color) => (
